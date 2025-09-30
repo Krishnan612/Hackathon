@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* NASA Space Theme - Deep Space Colors */
+    --background: 220 40% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 35% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 35% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* NASA Blue as primary */
+    --primary: 217 91% 30%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Cosmic purple secondary */
+    --secondary: 270 60% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 30% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Mars orange accent */
+    --accent: 25 95% 53%;
+    --accent-foreground: 220 40% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Nebula gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(217 91% 30%) 0%, hsl(270 60% 25%) 50%, hsl(290 70% 30%) 100%);
+    --gradient-planet: linear-gradient(180deg, hsl(220 35% 8% / 0.8) 0%, hsl(220 35% 8%) 100%);
+    
+    /* Glow effects */
+    --glow-primary: 0 0 20px hsl(217 91% 60% / 0.5);
+    --glow-accent: 0 0 30px hsl(25 95% 53% / 0.4);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  .cosmic-gradient {
+    background: var(--gradient-cosmic);
+  }
+  
+  .planet-glow {
+    box-shadow: var(--glow-primary);
+    transition: var(--transition-smooth);
+  }
+  
+  .planet-glow:hover {
+    box-shadow: var(--glow-primary), var(--glow-accent);
+    transform: scale(1.05);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px hsl(217 91% 60% / 0.6);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
