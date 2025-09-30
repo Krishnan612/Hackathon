@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: [https://lovable.dev/projects/d93d033e-4d0b-4a43-9889-e3d8f6c73c29](https://github.com/Gnanaraj2006/Astro-Innovators)
+**URL**: [(https://github.com/Gnanaraj2006/Astro-Innovators)]
 
 ## How can I edit this code?
 
