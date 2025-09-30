@@ -1,22 +1,16 @@
-# Welcome to your Lovable project
+# Welcome to NASA space App challenge 
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/d93d033e-4d0b-4a43-9889-e3d8f6c73c29
+**URL**: [https://lovable.dev/projects/d93d033e-4d0b-4a43-9889-e3d8f6c73c29](https://github.com/Gnanaraj2006/Astro-Innovators)
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/d93d033e-4d0b-4a43-9889-e3d8f6c73c29) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -60,14 +54,25 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Installation & Setup
+
+### Required Packages
+```bash
+# Core dependencies (already included in Lovable projects)
+npm install react react-dom react-router-dom
+npm install -D typescript @types/react @types/react-dom
+
+# UI & Styling (already included)
+npm install tailwindcss tailwindcss-animate
+npm install @radix-ui/react-dialog @radix-ui/react-scroll-area
+npm install class-variance-authority clsx tailwind-merge
+
+# Recommended additions for full features
+npm install @tanstack/react-query  # API data fetching & caching
+npm install framer-motion          # Advanced animations (optional)
+npm install react-lazy-load-image-component  # Image lazy loading
+```
+
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/d93d033e-4d0b-4a43-9889-e3d8f6c73c29) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Publice by using netlify
