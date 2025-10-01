@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Planet } from "@/types/planet";
+import { useTextToSpeech } from "@/hooks/useTextToSpeech";
 
 interface PlanetCardProps {
   planet: Planet;
@@ -7,6 +8,7 @@ interface PlanetCardProps {
 }
 
 export const PlanetCard = ({ planet, onClick }: PlanetCardProps) => {
+  const { speak } = useTextToSpeech();
   return (
     <Card
       role="button"
@@ -35,7 +37,6 @@ export const PlanetCard = ({ planet, onClick }: PlanetCardProps) => {
           }}
         />
       </div>
-      
       <div className="p-6">
         <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-glow transition-all">
           {planet.name}
@@ -46,8 +47,18 @@ export const PlanetCard = ({ planet, onClick }: PlanetCardProps) => {
         <p className="text-foreground/80 text-sm leading-relaxed">
           {planet.description}
         </p>
+        <button
+          type="button"
+          className="mt-3 px-3 py-1 rounded bg-primary text-white hover:bg-primary/80 transition"
+          onClick={(e) => {
+            e.stopPropagation();
+            speak(planet.description);
+          }}
+          aria-label={`Listen to ${planet.name} description`}
+        >
+          🔊 Listen
+        </button>
       </div>
-
       <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
     </Card>
   );
