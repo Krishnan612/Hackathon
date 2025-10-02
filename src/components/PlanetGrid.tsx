@@ -9,18 +9,21 @@ interface PlanetGridProps {
 export const PlanetGrid = ({ planets, onPlanetClick }: PlanetGridProps) => {
   return (
     <section className="py-20 px-4">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16 animate-fade-in">
+      <div className="container mx-auto max-w-7xl flex flex-col items-center">
+        
+        {/* Title Section */}
+        <div className="text-center mb-16 animate-fade-in max-w-2xl">
           <h2 className="text-5xl font-bold text-foreground mb-4 text-glow">
             Explore Our Solar System
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground">
             Click on any planet to discover its fascinating story, scientific facts, and incredible imagery
           </p>
         </div>
 
-        <div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        {/* Planet Cards */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full"
           role="list"
           aria-label="Solar system planets"
         >

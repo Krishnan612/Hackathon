@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useTextToSpeech } from "@/hooks/useTextToSpeech";
+import { planetNarrations } from "@/data/planetNarrations";
 import { X, ExternalLink } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -29,8 +31,9 @@ export const PlanetStory = ({ planet, isOpen, onClose }: PlanetStoryProps) => {
     }
   }, [isOpen, planet]);
 
-  if (!planet) return null;
 
+  const { speak } = useTextToSpeech();
+  if (!planet) return null;
   const { story } = planet;
 
   return (
@@ -203,24 +206,21 @@ export const PlanetStory = ({ planet, isOpen, onClose }: PlanetStoryProps) => {
                 </>
               )}
 
-              {/* Audio Narration */}
-              {story.audioNarration && (
-                <>
-                  <Separator className="bg-border" />
-                  <section className="space-y-4">
-                    <h3 className="text-2xl font-bold text-foreground">Audio Narration</h3>
-                    <audio
-                      controls
-                      className="w-full"
-                      preload="metadata"
-                      aria-label="Story narration audio"
-                    >
-                      <source src={story.audioNarration} type="audio/mpeg" />
-                      Your browser does not support the audio element.
-                    </audio>
-                  </section>
-                </>
-              )}
+              {/* Audio Narration (Text-to-Speech) */}
+              <>
+                <Separator className="bg-border" />
+                <section className="space-y-4">
+                  <h3 className="text-2xl font-bold text-foreground">Audio Narration</h3>
+                  <button
+                    type="button"
+                    className="px-3 py-1 rounded bg-primary text-white hover:bg-primary/80 transition"
+                    onClick={() => speak(planetNarrations[planet.name] || story.introduction)}
+                    aria-label={`Listen to ${planet.name} audio narration`}
+                  >
+                    🔊 Listen to Narration
+                  </button>
+                </section>
+              </>
             </div>
           </div>
         </ScrollArea>
