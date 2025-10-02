@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { PlanetGrid } from "@/components/PlanetGrid";
 import { PlanetStory } from "@/components/PlanetStory";
 import { Planet } from "@/types/planet";
@@ -60,8 +61,11 @@ const Index = () => {
         onClose={handleCloseStory}
       />
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12 px-4">
+  {/* Scroll To Top Button */}
+  <ScrollToTopButton />
+
+  {/* Footer */}
+  <footer className="border-t border-border py-12 px-4">
         <div className="container mx-auto max-w-7xl text-center">
           <p className="text-muted-foreground">
             Educational content inspired by NASA's planetary science missions
