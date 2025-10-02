@@ -206,21 +206,24 @@ export const PlanetStory = ({ planet, isOpen, onClose }: PlanetStoryProps) => {
                 </>
               )}
 
-              {/* Audio Narration (Text-to-Speech) */}
-              <>
-                <Separator className="bg-border" />
-                <section className="space-y-4">
-                  <h3 className="text-2xl font-bold text-foreground">Audio Narration</h3>
-                  <button
-                    type="button"
-                    className="px-3 py-1 rounded bg-primary text-white hover:bg-primary/80 transition"
-                    onClick={() => speak(planetNarrations[planet.name] || story.introduction)}
-                    aria-label={`Listen to ${planet.name} audio narration`}
-                  >
-                    🔊 Listen to Narration
-                  </button>
-                </section>
-              </>
+              {/* Audio Narration */}
+              {story.audioNarration && (
+                <>
+                  <Separator className="bg-border" />
+                  <section className="space-y-4">
+                    <h3 className="text-2xl font-bold text-foreground">Audio Narration</h3>
+                    <audio
+                      controls
+                      className="w-full"
+                      preload="metadata"
+                      aria-label="Story narration audio"
+                    >
+                      <source src={story.audioNarration} type="audio/mpeg" />
+                      Your browser does not support the audio element.
+                    </audio>
+                  </section>
+                </>
+              )}
             </div>
           </div>
         </ScrollArea>

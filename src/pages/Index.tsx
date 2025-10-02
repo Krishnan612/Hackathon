@@ -71,7 +71,7 @@ const Index = () => {
             Educational content inspired by NASA's planetary science missions
           </p>
           <p className="text-sm text-muted-foreground mt-2">
-            Images and data courtesy of NASA and its partners
+          <a href="">  Team Astro Innovators</a>
           </p>
         </div>
       </footer>
