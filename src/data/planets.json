@@ -1,5 +1,52 @@
 [
   {
+    "id": "sun",
+    "name": "Sun",
+    "subtitle": "The Star at the Center",
+    "thumbnail": "/src/assets/sun.png",
+    "color": "#FFD700",
+    "description": "The blazing heart of our solar system, source of light and life.",
+    "story": {
+      "headline": "Sun: The Solar Engine",
+      "introduction": "The Sun is a G-type main-sequence star that sits at the center of our solar system. Its immense gravity holds the planets, asteroids, and comets in orbit, while its energy drives Earth's climate and sustains life.",
+      "sections": [
+        {
+          "title": "A Giant Ball of Plasma",
+          "content": "The Sun is composed mostly of hydrogen and helium. Through nuclear fusion in its core, it converts hydrogen into helium, releasing vast amounts of energy as light and heat. Every second, the Sun fuses about 600 million tons of hydrogen.",
+          "image": "/src/assets/sun.png"
+        },
+        {
+          "title": "Layers of the Sun",
+          "content": "The Sun has several layers: the core (where fusion happens), the radiative and convective zones, the visible photosphere, the chromosphere, and the outer corona. The corona, visible during a total solar eclipse, is hotter than the surface and extends millions of kilometers into space."
+        },
+        {
+          "title": "Solar Activity",
+          "content": "The Sun's surface is dynamic, with sunspots, solar flares, and coronal mass ejections. These phenomena can affect space weather, impacting satellites, communications, and even power grids on Earth. The Sun follows an 11-year cycle of activity, from solar minimum to solar maximum."
+        }
+      ],
+      "timeline": [
+        { "year": "4.6 billion years ago", "event": "Sun forms from a collapsing cloud of gas and dust" },
+        { "year": "Present", "event": "Sun is halfway through its main-sequence life" },
+        { "year": "5 billion years from now", "event": "Sun will expand into a red giant" },
+        { "year": "7.5 billion years from now", "event": "Sun will shed its outer layers and become a white dwarf" }
+      ],
+      "facts": [
+        { "label": "Type", "value": "G2V Main Sequence Star" },
+        { "label": "Diameter", "value": "1,391,000 km" },
+        { "label": "Mass", "value": "1.989 × 10³⁰ kg" },
+        { "label": "Surface Temperature", "value": "5,500°C" },
+        { "label": "Core Temperature", "value": "15,000,000°C" },
+        { "label": "Distance from Earth", "value": "149.6 million km (1 AU)" },
+        { "label": "Age", "value": "4.6 billion years" }
+      ],
+      "externalLinks": [
+        { "title": "NASA Sun Overview", "url": "https://solarsystem.nasa.gov/solar-system/sun/overview/" },
+        { "title": "Solar Dynamics Observatory", "url": "https://sdo.gsfc.nasa.gov/" }
+      ],
+      "audioNarration": "https://example.com/audio/sun-narration.mp3"
+    }
+  },
+  {
     "id": "mercury",
     "name": "Mercury",
     "subtitle": "The Swift Messenger",
