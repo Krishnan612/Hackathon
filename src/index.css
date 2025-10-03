@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+
 
 @layer base {
   :root {
-    /* NASA Space Theme - Deep Space Colors */
+    
     --background: 220 40% 4%;
     --foreground: 210 40% 98%;
 
@@ -18,11 +16,11 @@ All colors MUST be HSL.
     --popover: 220 35% 8%;
     --popover-foreground: 210 40% 98%;
 
-    /* NASA Blue as primary */
+   
     --primary: 217 91% 30%;
     --primary-foreground: 210 40% 98%;
 
-    /* Cosmic purple secondary */
+   
     --secondary: 270 60% 25%;
     --secondary-foreground: 210 40% 98%;
 
