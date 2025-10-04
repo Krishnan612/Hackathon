@@ -6,6 +6,7 @@ export interface Planet {
   color: string;
   description: string;
   story: PlanetStory;
+  planetSound?: string; // URL or path to the planet's sound
 }
 
 export interface PlanetStory {

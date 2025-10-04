@@ -1,12 +1,13 @@
 [
   {
-    "id": "sun",
+      "id": "sun",
     "name": "Sun",
     "subtitle": "The Star at the Center",
     "thumbnail": "/src/assets/sun.png",
-    "color": "#FFD700",
-    "description": "The blazing heart of our solar system, source of light and life.",
-    "story": {
+  "color": "#FFD700",
+  "description": "The blazing heart of our solar system, source of light and life.",
+  "planetSound": "/src/assets/planet-sounds/sun.mp3",
+  "story": {
       "headline": "Sun: The Solar Engine",
       "introduction": "The Sun is a G-type main-sequence star that sits at the center of our solar system. Its immense gravity holds the planets, asteroids, and comets in orbit, while its energy drives Earth's climate and sustains life.",
       "sections": [
@@ -53,6 +54,7 @@
     "thumbnail": "/src/assets/mercury.jpg",
     "color": "#8C7853",
     "description": "The smallest planet and closest to the Sun, a world of extremes.",
+    "planetSound": "/src/assets/planet-sounds/mercury.mp3",
     "story": {
       "headline": "Mercury: The Sun's Scorched Companion",
       "introduction": "Mercury, the smallest planet in our solar system and closest to the Sun, experiences the most extreme temperature variations of any planet. This ancient, cratered world races around the Sun faster than any other planet, completing its orbit in just 88 Earth days.",
@@ -139,6 +141,7 @@
     "thumbnail": "/src/assets/venus.jpg",
     "color": "#FFC649",
     "description": "A hellish world hidden beneath toxic clouds, the hottest planet in our solar system.",
+    "planetSound": "/src/assets/planet-sounds/venus.mp3",
     "story": {
       "headline": "Venus: Beauty Concealing Inferno",
       "introduction": "Venus, named after the Roman goddess of love and beauty, is anything but hospitable. Beneath its brilliant appearance as the brightest object in our night sky lies a hellish world with crushing atmospheric pressure, sulfuric acid clouds, and surface temperatures hot enough to melt lead.",
@@ -225,6 +228,7 @@
     "thumbnail": "/src/assets/earth.jpg",
     "color": "#0077BE",
     "description": "Our home planet, a unique oasis of life in the cosmos.",
+    "planetSound": "/src/assets/planet-sounds/earth.mp3",
     "story": {
       "headline": "Earth: The Only Known Harbor of Life",
       "introduction": "In the vast cosmic ocean, Earth stands as the only known world that harbors life. This blue marble, suspended in a sunbeam, has nurtured billions of species over 4.5 billion years.",
@@ -312,6 +316,7 @@
     "thumbnail": "/src/assets/mars.jpg",
     "color": "#CD5C5C",
     "description": "A cold desert world and humanity's next frontier.",
+    "planetSound": "/src/assets/planet-sounds/mars.mp3",
     "story": {
       "headline": "Mars: Humanity's Next Great Adventure",
       "introduction": "Mars, the fourth planet from the Sun, beckons humanity with its rusty red surface and tantalizing hints of a watery past. This world, half the size of Earth, holds secrets about planetary evolution and the potential for life beyond our home.",
@@ -484,6 +489,7 @@
     "thumbnail": "/src/assets/jupiter.jpg",
     "color": "#DAA520",
     "description": "A massive gas giant with dozens of moons.",
+    "planetSound": "/src/assets/planet-sounds/Jupiter.mp3",
     "story": {
       "headline": "Jupiter: The Giant Guardian",
       "introduction": "Jupiter reigns as the largest planet in our solar system, a gas giant with a mass greater than all other planets combined. Its powerful gravity has shaped the architecture of our cosmic neighborhood and may have protected Earth from catastrophic impacts.",
@@ -570,6 +576,7 @@
     "thumbnail": "/src/assets/saturn.jpg",
     "color": "#FAD5A5",
     "description": "A gas giant famous for its spectacular ring system.",
+    "planetSound": "/src/assets/planet-sounds/saturn.mp3",
     "story": {
       "headline": "Saturn: Lord of the Rings",
       "introduction": "Saturn captivates with the most spectacular ring system in the solar system. This gas giant, the second-largest planet, has fascinated humanity since ancient times and continues to reveal surprises about planetary formation, moon systems, and the potential for life in unexpected places.",
@@ -656,6 +663,7 @@
     "thumbnail": "/src/assets/uranus.jpg",
     "color": "#4FD0E7",
     "description": "An ice giant rotating on its side with a mysterious blue-green hue.",
+    "planetSound": "/src/assets/planet-sounds/uranus.mp3",
     "story": {
       "headline": "Uranus: The Sideways World",
       "introduction": "Uranus, the seventh planet from the Sun, is an oddball in many ways. This ice giant rotates on its side, likely the result of a massive ancient collision, making its seasons the most extreme in the solar system. Its pale cyan color and frigid temperatures make it one of the coldest planets despite not being the most distant.",
@@ -742,6 +750,7 @@
     "thumbnail": "/src/assets/neptune.jpg",
     "color": "#4169E1",
     "description": "The most distant planet with the fastest winds in the solar system.",
+    "planetSound": "/src/assets/planet-sounds/Neptune.mp3",
     "story": {
       "headline": "Neptune: The Storm-Tossed Giant",
       "introduction": "Neptune, the eighth and most distant planet from the Sun, is a world of supersonic winds and mysterious dark storms. This deep blue ice giant was the first planet discovered through mathematical prediction rather than direct observation, and continues to surprise scientists with its dynamic atmosphere and intriguing moon system.",
