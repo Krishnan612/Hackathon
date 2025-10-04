@@ -115,17 +115,7 @@ export const PlanetStory = ({ planet, isOpen, onClose }: PlanetStoryProps) => {
                       loading="lazy"
                     />
                   )}
-                  {section.video && (
-                    <video
-                      controls
-                      className="w-full rounded-lg shadow-lg"
-                      preload="metadata"
-                      aria-label={`Video about ${section.title}`}
-                    >
-                      <source src={section.video} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  )}
+                  {/* it is video section */}
                 </article>
               ))}
 
@@ -206,24 +196,24 @@ export const PlanetStory = ({ planet, isOpen, onClose }: PlanetStoryProps) => {
                 </>
               )}
 
-              {/* Audio Narration */}
-              {story.audioNarration && (
-                <>
-                  <Separator className="bg-border" />
-                  <section className="space-y-4">
-                    <h3 className="text-2xl font-bold text-foreground">Audio Narration</h3>
-                    <audio
-                      controls
-                      className="w-full"
-                      preload="metadata"
-                      aria-label="Story narration audio"
-                    >
-                      <source src={story.audioNarration} type="audio/mpeg" />
-                      Your browser does not support the audio element.
-                    </audio>
-                  </section>
-                </>
-              )}
+              {/* Audio Narration (TTS) */}
+              <>
+                <Separator className="bg-border" />
+                <section className="space-y-4">
+                  <h3 className="text-2xl font-bold text-foreground">Audio Narration</h3>
+                  <button
+                    type="button"
+                    className="px-3 py-1 rounded bg-primary text-white hover:bg-primary/80 transition"
+                    onClick={() => {
+                      const narration = planetNarrations[planet.name] || planet.description;
+                      speak(narration);
+                    }}
+                    aria-label={`Listen to ${planet.name} narration`}
+                  >
+                    🔊 Audio Narration
+                  </button>
+                </section>
+              </>
             </div>
           </div>
         </ScrollArea>

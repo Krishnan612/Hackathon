@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
+
 import { Planet } from "@/types/planet";
 import { useTextToSpeech } from "@/hooks/useTextToSpeech";
+import { useRef, useState } from "react";
 
 interface PlanetCardProps {
   planet: Planet;
@@ -9,6 +11,25 @@ interface PlanetCardProps {
 
 export const PlanetCard = ({ planet, onClick }: PlanetCardProps) => {
   const { speak } = useTextToSpeech();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  // Toggle play/stop for planet sound
+  const playPlanetSound = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!planet.planetSound) return;
+    if (!audioRef.current) {
+      audioRef.current = new Audio(planet.planetSound);
+      audioRef.current.onended = () => setIsPlaying(false);
+    }
+    if (isPlaying) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
   return (
     <Card
       role="button"
@@ -47,19 +68,32 @@ export const PlanetCard = ({ planet, onClick }: PlanetCardProps) => {
         <p className="text-foreground/80 text-sm leading-relaxed">
           {planet.description}
         </p>
-        <button
-          type="button"
-          className="mt-3 px-3 py-1 rounded bg-primary text-white hover:bg-primary/80 transition"
-          onClick={(e) => {
-            e.stopPropagation();
-            speak(planet.description);
-          }}
-          aria-label={`Listen to ${planet.name} description`}
-        >
-          🔊 Listen
-        </button>
+        <div className="flex gap-2 mt-3">
+          <button
+            type="button"
+            className="px-3 py-1 rounded bg-primary text-white hover:bg-primary/80 transition"
+            onClick={(e) => {
+              e.stopPropagation();
+              // Use narration from planetNarrations if available, fallback to description
+              const narration = planet.description;
+              speak(narration);
+            }}
+            aria-label={`Listen to ${planet.name} narration`}
+          >
+            🔊 Listen
+          </button>
+          {planet.planetSound && (
+            <button
+              type="button"
+              className="px-3 py-1 rounded bg-secondary text-foreground hover:bg-secondary/80 transition border border-border"
+              onClick={playPlanetSound}
+              aria-label={`Play ${planet.name} sound`}
+            >
+              {isPlaying ? "⏹️ Stop Sound" : "🎵 Play Sound"}
+            </button>
+          )}
+        </div>
       </div>
-      <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
-    </Card>
-  );
-};
+        </Card>
+        );
+    };
