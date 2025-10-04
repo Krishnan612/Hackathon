@@ -9,14 +9,15 @@ import uranusImg from '@/assets/uranus.jpg';
 import neptuneImg from '@/assets/neptune.jpg';
 
 import sunSound from '@/assets/planet-sounds/sun.mp3';
-import mercurySound from '@/assets/planet-sounds/mercury.mp3';
-import venusSound from '@/assets/planet-sounds/venus.mp3';
+// Filenames in the repo are case-sensitive on Linux (Netlify). Match exact names below.
+import mercurySound from '@/assets/planet-sounds/Mercury.mp3';
+import venusSound from '@/assets/planet-sounds/Venus.mp3';
 import earthSound from '@/assets/planet-sounds/earth.mp3';
 import marsSound from '@/assets/planet-sounds/mars.mp3';
 import jupiterSound from '@/assets/planet-sounds/Jupiter.mp3';
 import saturnSound from '@/assets/planet-sounds/saturn.mp3';
 import uranusSound from '@/assets/planet-sounds/uranus.mp3';
-import neptuneSound from '@/assets/planet-sounds/Neptune .mp3';
+import neptuneSound from '@/assets/planet-sounds/Neptune.mp3';
 
 import type { Planet } from '@/types/planet';
 
