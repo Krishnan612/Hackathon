@@ -1,10 +1,26 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
+import moonImg from '@/assets/Moon (Earth).png';
+import ganymedeImg from '@/assets/Ganymede.jpg';
+import titanImg from '@/assets/Titan.png';
+import europaImg from '@/assets/Europa.png';
+import mirandaImg from '@/assets/Miranda.png';
+import tritonImg from '@/assets/Triton.jpg';
+import milkyWayImg from '@/assets/Milky-way.jpg';
+import andromedaImg from '@/assets/Andromeda-gal.jpg';
+import sombreroImg from '@/assets/Sombrero-Galaxy.jpeg';
+import messierImg from '@/assets/Messier.png';
+import lmcImg from '@/assets/LMC.jpg';
+import lenticularImg from '@/assets/Lenticular.jpg';
+import blackHoleImg from '@/assets/black-hole.jpg';
+import neutronStarImg from '@/assets/neutron-star.jpg';
+import nebulapcImg from '@/assets/nebulapc.jpg';
+
 const moons = [
   {
     name: 'Moon (Earth)',
     subtitle: 'Earth\'s Only Natural Satellite',
-    thumbnail: '/src/assets/Moon (Earth).png',
+    thumbnail: moonImg,
     color: '#bfc9d1',
     description: 'The Moon is Earth\'s only natural satellite and the fifth largest moon in the Solar System. It influences Earth\'s tides and has been a source of wonder for humanity throughout history.',
     facts: [
@@ -18,7 +34,7 @@ const moons = [
   {
     name: 'Ganymede',
     subtitle: 'Largest Moon of Jupiter',
-    thumbnail: '/src/assets/Ganymede.jpg',
+    thumbnail: ganymedeImg,
     color: '#e0d7c6',
     description: 'Ganymede is the largest moon in the Solar System and is even bigger than Mercury. It has a magnetic field and a possible subsurface ocean.',
     facts: [
@@ -31,7 +47,7 @@ const moons = [
   {
     name: 'Titan',
     subtitle: 'Largest Moon of Saturn',
-    thumbnail: '/src/assets/Titan.png',
+    thumbnail: titanImg,
     color: '#f5e6b2',
     description: 'Titan is Saturn\'s largest moon and the second largest in the Solar System. It has a thick atmosphere and lakes of liquid methane and ethane.',
     facts: [
@@ -44,7 +60,7 @@ const moons = [
   {
     name: 'Europa',
     subtitle: 'Icy Moon of Jupiter',
-    thumbnail: '/src/assets/Europa.png',
+    thumbnail: europaImg,
     color: '#dbefff',
     description: 'Europa is one of Jupiter\'s largest moons and is believed to have a subsurface ocean beneath its icy crust, making it a prime candidate for the search for extraterrestrial life.',
     facts: [
@@ -57,7 +73,7 @@ const moons = [
   {
     name: 'Miranda',
     subtitle: 'Moon of Uranus',
-    thumbnail: '/src/assets/Miranda.png',
+    thumbnail: mirandaImg,
     color: '#c9e6e6',
     description: 'Miranda is the smallest and innermost of Uranus\'s five major moons. It is known for its extreme and varied surface features, including giant canyons and patchwork regions.',
     facts: [
@@ -70,7 +86,7 @@ const moons = [
   {
     name: 'Triton',
     subtitle: 'Largest Moon of Neptune',
-    thumbnail: '/src/assets/Triton.jpg',
+    thumbnail: tritonImg,
     color: '#b3d1e6',
     description: 'Triton is the largest moon of Neptune and is unique for its retrograde orbit. It has geysers that spout nitrogen gas and a surface of frozen nitrogen and water ice.',
     facts: [
@@ -86,7 +102,7 @@ const galaxies = [
   {
     name: 'Milky Way',
     subtitle: 'Our Home Galaxy',
-    thumbnail: '/src/assets/Milky-way.jpg',
+    thumbnail: milkyWayImg,
     color: '#b3c6e7',
     description: 'The Milky Way is the galaxy that contains our Solar System. It is a barred spiral galaxy with hundreds of billions of stars.',
     facts: [
@@ -99,7 +115,7 @@ const galaxies = [
   {
     name: 'Andromeda',
     subtitle: 'Nearest Spiral Galaxy',
-    thumbnail: '/src/assets/Andromeda-gal.jpg',
+    thumbnail: andromedaImg,
     color: '#e3d1f7',
     description: 'The Andromeda Galaxy is the closest spiral galaxy to the Milky Way and is on a collision course with our galaxy billions of years from now.',
     facts: [
@@ -112,7 +128,7 @@ const galaxies = [
   {
     name: 'Sombrero Galaxy',
     subtitle: 'Unusual Spiral Galaxy',
-    thumbnail: '/src/assets/Sombrero-Galaxy.jpeg',
+    thumbnail: sombreroImg,
     color: '#f7e3c1',
     description: 'The Sombrero Galaxy is known for its bright nucleus and large central bulge, giving it the appearance of a sombrero hat.',
     facts: [
@@ -124,7 +140,7 @@ const galaxies = [
   {
   name: 'Messier 87 (M87)',
   subtitle: 'Giant Elliptical Galaxy',
-  thumbnail: '/src/assets/Messier.png',
+  thumbnail: messierImg,
   color: '#d1e0f7',
   description: 'Messier 87 is a massive elliptical galaxy in the Virgo Cluster, famous for housing a supermassive black hole at its center, which was the first black hole ever imaged by the Event Horizon Telescope.',
   facts: [
@@ -137,7 +153,7 @@ const galaxies = [
   {
     name: 'Large Magellanic Cloud (LMC)',
     subtitle: 'Irregular Satellite Galaxy',
-    thumbnail: '/src/assets/LMC.jpg',
+    thumbnail: lmcImg,
     color: '#e6d1c3',
     description: 'The Large Magellanic Cloud is a nearby irregular galaxy and a satellite of the Milky Way. It is the fourth largest galaxy in our Local Group and is visible from the Southern Hemisphere.',
     facts: [
@@ -150,8 +166,8 @@ const galaxies = [
   {
     name: 'Lenticular (S0) Galaxy',
     subtitle: 'Intermediate Galaxy Type',
-    thumbnail: '/src/assets/Lenticular.jpg',
-    color: '#e6e2d3',
+    thumbnail: lenticularImg,
+  color: '#e6e2d3',
     description: 'Lenticular galaxies (S0) are an intermediate type between elliptical and spiral galaxies. They have a central bulge and a disk but lack significant spiral arms, often appearing lens-shaped.',
     facts: [
       'Diameter: 15,000–150,000 light-years',
@@ -167,8 +183,8 @@ const celestialObjects = [
   {
     name: 'Black Hole',
     subtitle: 'Region of Extreme Gravity',
-    thumbnail: '/src/assets/black-hole.jpg',
-    color: '#22232a',
+    thumbnail: blackHoleImg,
+  color: '#22232a',
     description: 'A black hole is a region in space where gravity is so strong that nothing, not even light, can escape. They are formed from the remnants of massive stars after supernova explosions.',
     facts: [
       'Event horizon: boundary beyond which nothing escapes',
@@ -180,8 +196,8 @@ const celestialObjects = [
   {
     name: 'Neutron Star',
     subtitle: 'Collapsed Core of a Massive Star',
-    thumbnail: '/src/assets/neutron-star.jpg',
-    color: '#6e7fa3',
+    thumbnail: neutronStarImg,
+  color: '#6e7fa3',
     description: 'A neutron star is the collapsed core of a massive star left after a supernova. It is incredibly dense, with a mass greater than the Sun but only about 20 km in diameter.',
     facts: [
       'Diameter: ~20 km',
@@ -193,8 +209,8 @@ const celestialObjects = [
   {
     name: 'Nebula',
     subtitle: 'Interstellar Cloud of Gas and Dust',
-    thumbnail: '/src/assets/nebulapc.jpg',
-    color: '#b6a1e6',
+    thumbnail: nebulapcImg,
+  color: '#b6a1e6',
     description: 'A nebula is a vast cloud of gas and dust in space, often serving as a stellar nursery where new stars are born. Famous examples include the Orion Nebula and the Eagle Nebula.',
     facts: [
       'Types: emission, reflection, planetary, dark',

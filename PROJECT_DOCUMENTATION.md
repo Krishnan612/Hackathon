@@ -29,8 +29,8 @@ src/
 │   ├── PlanetCard.tsx   # Individual planet card
 │   ├── PlanetGrid.tsx   # Grid layout for planets
 │   └── PlanetStory.tsx  # Story modal/dialog
-├── data/                # JSON data files
-│   └── planets.json     # Planet stories database
+├── data/                # Data modules (imports images/audio so Vite bundles assets)
+│   └── planets.ts       # Planet stories database
 ├── pages/               # Route pages
 │   └── Index.tsx        # Main landing page
 ├── types/               # TypeScript definitions
@@ -125,8 +125,8 @@ interface ExternalLink {
 }
 ```
 
-### Sample JSON (planets.json)
-See `src/data/planets.json` for complete examples. Structure:
+### Planet data (src/data/planets.ts)
+See `src/data/planets.ts` for examples. This TypeScript module imports assets so that Vite can bundle images and audio during the build. Structure:
 ```json
 [
   {
@@ -369,7 +369,7 @@ const { data, isLoading, error } = useNasaApod();
 
 **Adding a New Planet**:
 1. Create planet images in `src/assets/` (e.g., `saturn.jpg`)
-2. Add planet object to `src/data/planets.json`:
+2. Add planet object to `src/data/planets.ts`:
 ```json
 {
   "id": "saturn",
@@ -620,7 +620,7 @@ const res = await fetch('/api/nasa?endpoint=/planetary/apod');
 ### Immediate Tasks (Copy & Run)
 1. ✅ **Run the starter app**: `npm run dev`
 2. ✅ **Explore components**: Modify colors in `src/index.css`
-3. ✅ **Add a planet**: Edit `src/data/planets.json` with Venus or Saturn
+3. ✅ **Add a planet**: Edit `src/data/planets.ts` with Venus or Saturn
 4. ✅ **Test accessibility**: Use keyboard only, enable screen reader
 5. ✅ **Get NASA API key**: https://api.nasa.gov/ → Add to `.env.local`
 

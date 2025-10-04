@@ -1,0 +1,4 @@
+/* /index.html 200
+
+# Redirect all requests to index.html for SPA routing (Netlify)
+# See: https://docs.netlify.com/routing/redirects/rewrites-proxies/

@@ -3,7 +3,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { PlanetGrid } from "@/components/PlanetGrid";
 import { PlanetStory } from "@/components/PlanetStory";
 import { Planet } from "@/types/planet";
-import planetsData from "@/data/planets.json";
+import planetsData from "@/data/planets";
 import spaceHero from "@/assets/space-hero.jpg";
 
 const Index = () => {
