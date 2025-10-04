@@ -1,4 +1,3 @@
-
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
 const moons = [
@@ -54,7 +53,33 @@ const moons = [
       'Distance from Jupiter: 670,900 km',
       'Discovered: 1610 by Galileo Galilei'
     ]
-  }
+  },
+  {
+    name: 'Miranda',
+    subtitle: 'Moon of Uranus',
+    thumbnail: '/src/assets/Miranda.png',
+    color: '#c9e6e6',
+    description: 'Miranda is the smallest and innermost of Uranus\'s five major moons. It is known for its extreme and varied surface features, including giant canyons and patchwork regions.',
+    facts: [
+      'Diameter: 471.6 km',
+      'Orbital Period: 1.41 days',
+      'Distance from Uranus: 129,900 km',
+      'Discovered: 1948 by Gerard Kuiper'
+    ]
+  },
+  {
+    name: 'Triton',
+    subtitle: 'Largest Moon of Neptune',
+    thumbnail: '/src/assets/Triton.jpg',
+    color: '#b3d1e6',
+    description: 'Triton is the largest moon of Neptune and is unique for its retrograde orbit. It has geysers that spout nitrogen gas and a surface of frozen nitrogen and water ice.',
+    facts: [
+      'Diameter: 2,706 km',
+      'Orbital Period: 5.88 days',
+      'Distance from Neptune: 354,800 km',
+      'Discovered: 1846 by William Lassell'
+    ]
+  },
 ];
 
 const galaxies = [
@@ -108,10 +133,77 @@ const galaxies = [
     'Type: Elliptical',
     'Supermassive black hole mass: ~6.5 billion solar masses'
   ]
-}
-
+  },
+  {
+    name: 'Large Magellanic Cloud (LMC)',
+    subtitle: 'Irregular Satellite Galaxy',
+    thumbnail: '/src/assets/LMC.jpg',
+    color: '#e6d1c3',
+    description: 'The Large Magellanic Cloud is a nearby irregular galaxy and a satellite of the Milky Way. It is the fourth largest galaxy in our Local Group and is visible from the Southern Hemisphere.',
+    facts: [
+      'Diameter: ~14,000 light-years',
+      'Stars: ~30 billion',
+      'Distance from Earth: ~163,000 light-years',
+      'Type: Irregular'
+    ]
+  },
+  {
+    name: 'Lenticular (S0) Galaxy',
+    subtitle: 'Intermediate Galaxy Type',
+    thumbnail: '/src/assets/Lenticular.jpg',
+    color: '#e6e2d3',
+    description: 'Lenticular galaxies (S0) are an intermediate type between elliptical and spiral galaxies. They have a central bulge and a disk but lack significant spiral arms, often appearing lens-shaped.',
+    facts: [
+      'Diameter: 15,000–150,000 light-years',
+      'Stars: Billions',
+      'Type: Lenticular (S0)',
+      'Notable example: NGC 2787'
+    ]
+  }
 ];
 
+
+const celestialObjects = [
+  {
+    name: 'Black Hole',
+    subtitle: 'Region of Extreme Gravity',
+    thumbnail: '/src/assets/black-hole.jpg',
+    color: '#22232a',
+    description: 'A black hole is a region in space where gravity is so strong that nothing, not even light, can escape. They are formed from the remnants of massive stars after supernova explosions.',
+    facts: [
+      'Event horizon: boundary beyond which nothing escapes',
+      'Types: stellar, supermassive, intermediate, primordial',
+      'First image: M87* (2019)',
+      'Detected by gravitational effects and X-ray emissions'
+    ]
+  },
+  {
+    name: 'Neutron Star',
+    subtitle: 'Collapsed Core of a Massive Star',
+    thumbnail: '/src/assets/neutron-star.jpg',
+    color: '#6e7fa3',
+    description: 'A neutron star is the collapsed core of a massive star left after a supernova. It is incredibly dense, with a mass greater than the Sun but only about 20 km in diameter.',
+    facts: [
+      'Diameter: ~20 km',
+      'Mass: 1.4 times the Sun',
+      'Density: ~4×10^17 kg/m³',
+      'Can spin up to 700 times per second'
+    ]
+  },
+  {
+    name: 'Nebula',
+    subtitle: 'Interstellar Cloud of Gas and Dust',
+    thumbnail: '/src/assets/nebulapc.jpg',
+    color: '#b6a1e6',
+    description: 'A nebula is a vast cloud of gas and dust in space, often serving as a stellar nursery where new stars are born. Famous examples include the Orion Nebula and the Eagle Nebula.',
+    facts: [
+      'Types: emission, reflection, planetary, dark',
+      'Birthplace of stars',
+      'Can span light-years across',
+      'Observed in visible and infrared light'
+    ]
+  },
+];
 
 const MoonGalaxyCard = ({ item }: { item: any }) => (
   <Card className="group relative overflow-hidden bg-card border-border hover:border-primary transition-all duration-500 planet-glow">
@@ -157,9 +249,15 @@ const MoonsAndGalaxy: React.FC = () => (
         ))}
       </div>
       <h3 className="text-3xl font-bold text-foreground mb-6 mt-8">Galaxies</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mb-16">
         {galaxies.map((galaxy, idx) => (
           <MoonGalaxyCard key={idx} item={galaxy} />
+        ))}
+      </div>
+      <h3 className="text-3xl font-bold text-foreground mb-6 mt-8">Celestial Objects</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        {celestialObjects.map((obj, idx) => (
+          <MoonGalaxyCard key={idx} item={obj} />
         ))}
       </div>
     </div>
