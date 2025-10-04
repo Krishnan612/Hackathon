@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Gallery | Achievements & Launches</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <header>
+        <h1>🛰️ NASA Gallery: Achievements & Launches</h1>
+        <p>A visual history of space exploration milestones.</p>
+    </header>
+
+    <div class="gallery-controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="launch">Rocket Launches</button>
+        <button class="filter-btn" data-filter="achievement">Major Achievements</button>
+        <button class="filter-btn" data-filter="hubble">Hubble/Telescopes</button>
+    </div>
+
+    <main class="gallery-container">
+        <div class="gallery-item" data-category="launch">
+            <img src="images/apollo_11.jpg" alt="Apollo 11 Launch">
+            <div class="overlay">
+                <h3>Apollo 11 Launch</h3>
+                <p>Saturn V rocket on July 16, 1969.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="achievement">
+            <img src="images/rover.jpg" alt="Mars Perseverance Rover">
+            <div class="overlay">
+                <h3>Perseverance Rover</h3>
+                <p>Exploring the Jezero Crater on Mars.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="hubble">
+            <img src="images/hubble.jpg" alt="Hubble Deep Field">
+            <div class="overlay">
+                <h3>Hubble Deep Field</h3>
+                <p>Image of thousands of galaxies (1995).</p>
+            </div>
+        </div>
+        
+        <div class="gallery-item" data-category="launch">
+            <img src="images/space-shuttle-discovery-launch.jpg" alt="Space Shuttle Discovery Launch">
+            <div class="overlay">
+                <h3>Space Shuttle Program</h3>
+                <p>The reusable orbiter system, launched 135 times.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="achievement">
+            <img src="images/iss.jpg" alt="International Space Station">
+            <div class="overlay">
+                <h3>International Space Station (ISS)</h3>
+                <p>A permanent orbiting research laboratory.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="hubble">
+            <img src="images/james-web.jpg" alt="James Webb Space Telescope">
+            <div class="overlay">
+                <h3>James Webb Space Telescope</h3>
+                <p>The premier space observatory of the next decade.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="achievement">
+            <img src="images/voyage_golden_record.jpg" alt="Voyager Golden Record">
+            <div class="overlay">
+                <h3>Voyager 1 & 2</h3>
+                <p>The first spacecraft to enter interstellar space.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="launch">
+            <img src="images/artemis.jpg" alt="Artemis I Launch">
+            <div class="overlay">
+                <h3>Artemis I Launch</h3>
+                <p>Uncrewed flight test of the Orion spacecraft and SLS rocket.</p>
+            </div>
+        </div>
+        
+        <div class="gallery-item" data-category="achievement">
+            <img src="images/new_horizon.jpg" alt="New Horizons close-up of Pluto">
+            <div class="overlay">
+                <h3>New Horizons Mission</h3>
+                <p>First close-up reconnaissance of Pluto and its moons.</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="galleryjs.js"></script>
+</body>
+</html>
